@@ -35,7 +35,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = '<your heroku app>.herokuapp.com'
+  host = 'damp-stream-42812.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.gmail.com',
@@ -43,7 +43,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name      => ENV['GMAIL_USERNAME'],
     :password       => ENV['GMAIL_PASSWORD'],
-    :domain         => 'heroku.com',
+    :domain         => 'herokuapp.com',
     :enable_starttls_auto => true
   }
   # Mount Action Cable outside main process or domain
